@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+/* Breakpont para el diseño responsive */
+@mixin breakpoint($br) {
+  @if $br == tablet {
+    @media (min-width: $br-tablet) {
+      @content;
+    }
+  }
+
+  @if $br == tablet_horizontal {
+    @media (min-width: $br-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $br == desktop {
+    @media (min-width: $br-desktop) {
+      @content;
+    }
+  }
+}
+
+/* estilo genérico para los botones */
+@mixin shadow_button {
+  box-shadow: 2px 2px 7px rgb(0, 0, 0, 0.5);
+}
