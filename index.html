@@ -8,20 +8,28 @@
   </head>
   <body>
     <header>
-      <img src="./img/creative-company-logo.svg" alt="Logo de la página web" />
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">service</a></li>
-        <li><a href="#">portafolio</a></li>
-        <li><a href="#">blog</a></li>
-      </ul>
-      <a href="#" class="btn-contact-us">contact us</a>
+      <div class="container-header">
+        <img
+          class="logo"
+          src="./img/creative-company-logo.svg"
+          alt="Logo de la página web"
+        />
+        <nav>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">portafolio</a></li>
+            <li><a href="#">blog</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="btn-contact-us">contact us</a>
+      </div>
     </header>
     <main>
       <section id="hero">
-        <div class="element-a">
-          <p>hi, there!</p>
+        <div class="container-hero">
+          <p><span>hi</span>, there!</p>
           <h1>
             <span>we</span> are a growing-up <span>creative</span>
             <span>agency</span> from <span>indonesia</span>!
@@ -31,36 +39,44 @@
             templates that come from the synergy of design and technology
           </p>
           <a href="#" class="btn-Collaborate"
-            ><span>let’s</span> <span class="icon-arrow"></span> Collaborate
+            >let’s Collaborate
             <img src="./img/button-arrow.svg" alt="arrow button"
           /></a>
         </div>
-        <div class="element-b"></div>
       </section>
-      <section class="Categories">
-        <article class="card">
-          <img src="./img/icon-web-desing.svg" alt="web design projects icon" />
-          <h2>web design projects</h2>
-          <p>
-            <span>make</span> your website user friendly and look more
-            professional
-          </p>
-        </article>
-        <article class="card">
-          <img src="./img/icon-social-media.svg" alt="social templates icon" />
-          <h2>social templates</h2>
-          <p>
-            <span>gain</span> more followers or subscribers with the right
-            template
-          </p>
-        </article>
-        <article class="card">
-          <img src="./img/icon-design.svg" alt="digital artwork icon" />
-          <h2>digital artwork</h2>
-          <p>
-            <span>Complete</span> your digital work with appropriate artwork
-          </p>
-        </article>
+
+      <section class="categories">
+        <div class="containter-categories">
+          <article class="card">
+            <img
+              src="./img/icon-web-desing.svg"
+              alt="web design projects icon"
+            />
+            <h2>web design projects</h2>
+            <p>
+              <span>make</span> your website user friendly and look more
+              professional
+            </p>
+          </article>
+          <article class="card">
+            <img
+              src="./img/icon-social-media.svg"
+              alt="social templates icon"
+            />
+            <h2>social templates</h2>
+            <p>
+              <span>gain</span> more followers or subscribers with the right
+              template
+            </p>
+          </article>
+          <article class="card">
+            <img src="./img/icon-design.svg" alt="digital artwork icon" />
+            <h2>digital artwork</h2>
+            <p>
+              <span>Complete</span> your digital work with appropriate artwork
+            </p>
+          </article>
+        </div>
       </section>
     </main>
     <div id="app"></div>
