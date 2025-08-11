@@ -1,4 +1,5 @@
 @use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
 
 /* diseño específico de container */
 .container-hero,
@@ -18,6 +19,11 @@
     url(./../../img/icon-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  /* Diseño tablet */
+  @include breakpoint(tablet) {
+    background-position: center center, 0px -115px;
+  }
 }
 
 .container-hero {
@@ -57,24 +63,80 @@
       background-color: $color-five;
     }
   }
+
+  /* Diseño tablet */
+  p:first-of-type {
+    font-size: $text-size-2xl;
+  }
+
+  h1:first-of-type {
+    font-size: $text-size-5xl;
+  }
+
+  p:last-of-type {
+    font-size: $text-size-2xl;
+  }
+
+  .btn-Collaborate {
+    font-size: $text-size-xl;
+  }
 }
 
 #categories {
-  /* Diseño mobile */
   background-color: $color-three;
-}
+  .card h2,
+  .card p span {
+    /* Diseño general */
+    text-transform: capitalize;
+  }
 
-.card img {
-  /* Diseño mobile */
-  padding-top: $space-10;
-}
+  .card p {
+    color: $color-six;
+  }
 
-.card:last-of-type p {
   /* Diseño mobile */
-  padding-bottom: $space-10;
-}
-.card h2,
-.card p span {
-  /* Diseño general */
-  text-transform: capitalize;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: $space-8;
+  }
+
+  .card img {
+    padding-top: $space-10;
+  }
+
+  /* Diseño tablet */
+  @include breakpoint(tablet) {
+    .containter-categories {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card h2 {
+      font-size: $text-size-2xl;
+    }
+
+    .card p {
+      font-size: $text-size-bt;
+    }
+  }
+
+  /* Diseño tablet horizontal */
+  @include breakpoint(tablet_horizontal) {
+    .containter-categories {
+      flex-direction: row;
+      gap: $space-4;
+      align-items: center;
+      width: 95vw;
+    }
+
+    .card h2 {
+      font-size: $text-size-3xl;
+    }
+
+    .card p {
+      font-size: $text-size-bt;
+    }
+  }
 }

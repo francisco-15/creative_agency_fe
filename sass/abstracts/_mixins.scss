@@ -9,7 +9,7 @@
   }
 
   @if $br == tablet_horizontal {
-    @media (min-width: $br-tablet-horizontal) {
+    @media (min-width: $br-tablet-horinzontal) {
       @content;
     }
   }
