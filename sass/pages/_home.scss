@@ -9,6 +9,43 @@
   height: 95vh;
 }
 
+/* Diseño desktop */
+html,
+body {
+  @include breakpoint(desktop) {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.container-hero {
+  @include breakpoint(desktop) {
+    width: 40vw;
+    margin: 0;
+    margin-left: 10%;
+  }
+}
+
+body {
+  position: relative;
+  @include breakpoint(desktop) {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      z-index: 0;
+      background-image: url(./../../img/iro-background@2x.jpg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+      width: 50%;
+      height: 100vh;
+    }
+  }
+}
+
 #hero {
   /*Versión mobile */
   background-image: linear-gradient(
@@ -23,6 +60,12 @@
   /* Diseño tablet */
   @include breakpoint(tablet) {
     background-position: center center, 0px -115px;
+  }
+
+  /* Diseño desktop */
+  @include breakpoint(desktop) {
+    background-image: none;
+    background-color: $color-one;
   }
 }
 
@@ -79,6 +122,16 @@
 
   .btn-Collaborate {
     font-size: $text-size-xl;
+  }
+
+  /* Diseño desktop */
+  @include breakpoint(desktop) {
+    justify-content: start;
+    padding-top: $space-17;
+
+    h1:first-of-type {
+      font-size: $text-size-7xl;
+    }
   }
 }
 
@@ -137,6 +190,32 @@
 
     .card p {
       font-size: $text-size-bt;
+    }
+  }
+
+  /* Diseño desktop */
+  @include breakpoint(desktop) {
+    position: absolute;
+    bottom: 0;
+    width: 70vw;
+
+    .containter-categories {
+      height: 17em;
+      justify-content: start;
+      padding-left: $space-15;
+    }
+
+    .card .container-text {
+      width: 80%;
+    }
+    .card h2 {
+      font-size: $text-size-bt;
+    }
+
+    .card p {
+      padding-top: $space-5;
+      font-size: $text-size-base;
+      color: $color-seven;
     }
   }
 }

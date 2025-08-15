@@ -55,4 +55,28 @@ header {
       }
     }
   }
+
+  /* Diseño para desktop del header */
+  @include breakpoint(desktop) {
+    .container-header {
+      justify-content: start;
+      gap: $space-22;
+
+      ul {
+        gap: $space-15;
+        a {
+          font-weight: 100;
+          font-size: $text-size-base;
+        }
+      }
+
+      .btn-contact-us {
+        position: absolute;
+        right: 250px;
+        padding: $space-6 $space-9;
+        background-color: $color-one;
+        color: $color-two;
+      }
+    }
+  }
 }
