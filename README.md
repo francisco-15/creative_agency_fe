@@ -36,7 +36,7 @@ Follow these steps to clone the project and configure it locally:
 
 ```bash
 # 1. Clone the repository
-git clone git@github.com:francisco-15/creative_agency_fe.git
+git clone https://github.com/francisco-15/creative_agency_fe.git
 
 # 2. Access the project folder
 cd code 
@@ -93,7 +93,7 @@ Sigue estos pasos para clonar el proyecto y configurarlo localmente:
 
 ```bash
 # 1. Clona el repositorio
-git clone git@github.com:francisco-15/creative_agency_fe.git
+git clone https://github.com/francisco-15/creative_agency_fe.git
 
 # 2. Accede a la carpeta del proyecto
 cd code 
